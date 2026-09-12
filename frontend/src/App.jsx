@@ -6,7 +6,6 @@ import HomePage from './pages/HomePage';
 import DholeraPage from './pages/DholeraPage';
 import LothalPage from './pages/LothalPage';
 import AboutPage from './pages/AboutPage';
-import LandPage from './pages/LandPage';
 import BlogsPage from './pages/BlogsPage';
 import GalleryPage from './pages/GalleryPage';
 import FaqsPage from './pages/FaqsPage';
@@ -31,7 +30,6 @@ export default function App() {
           <Route path="/dholera" element={<DholeraPage />} />
           <Route path="/lothal" element={<LothalPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/land" element={<LandPage />} />
           <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/faqs" element={<FaqsPage />} />

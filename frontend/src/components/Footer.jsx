@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, ArrowRight, ShieldCheck, ExternalLink } from 'lucide-react';
+import { MapPin, Phone, Mail, ShieldCheck, ExternalLink } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -8,14 +8,14 @@ export default function Footer() {
       <div className="container footer-top">
         <div className="footer-brand-col">
           <Link to="/" className="brand footer-brand">
-            <img src="/assets/logo.png" alt="Dholera & Lothal" className="brand-logo-img" />
+            <img src="/assets/urban-keys-logo.png" alt="Urban Keys Infra" className="brand-logo-img" />
             <div className="brand-text">
-              <span className="brand-title light">Dholera & Lothal</span>
-              <span className="brand-sub light">LAND &bull; INVESTMENT &bull; FUTURE</span>
+              <span className="brand-title light">Urban Keys Infra</span>
+              <span className="brand-sub light">20+ YRS REAL ESTATE CONSULTANCY &bull; JAIPUR</span>
             </div>
           </Link>
           <p className="footer-desc">
-            Your trusted advisory partner for strategic land investments, industrial allocations, and commercial growth across Dholera Special Investment Region (SIR) and the Lothal National Maritime Heritage Corridor.
+            Urban Keys Infra is a premier Jaipur-based real estate consultancy with over 20+ years of expertise helping clients choose their favorite property, from high-growth residential plots to strategic commercial land across Dholera SIR and Lothal NMHC.
           </p>
           <div className="footer-contact-info">
             <div className="f-contact-item">
@@ -24,51 +24,55 @@ export default function Footer() {
             </div>
             <div className="f-contact-item">
               <Mail size={16} />
-              <span>advisory@dholera-lothal.in</span>
+              <span>urbankeysinfra@gmail.com</span>
             </div>
             <div className="f-contact-item">
               <MapPin size={16} />
-              <span>Dholera SIR Activation Zone &amp; Ahmedabad Office, Gujarat</span>
+              <span>Head Office: Jaipur, Rajasthan &bull; Regional Desk: Dholera SIR, Gujarat</span>
             </div>
           </div>
         </div>
 
         <div className="footer-links-col">
-          <h4>Regions &amp; Portals</h4>
+          <h4>Navigation</h4>
           <ul>
+            <li><Link to="/about">About Us (Urban Keys Infra)</Link></li>
             <li><Link to="/dholera">Dholera SIR Smart City</Link></li>
             <li><Link to="/lothal">Lothal Maritime Corridor</Link></li>
-            <li><Link to="/about">Regional Comparison &amp; About</Link></li>
-            <li><Link to="/land">Land Options &amp; Zoning</Link></li>
-            <li><Link to="/gallery">Media &amp; Project Gallery</Link></li>
+            <li><Link to="/gallery">Visual Gallery</Link></li>
+            <li><Link to="/blogs">Research &amp; Updates</Link></li>
           </ul>
         </div>
 
         <div className="footer-links-col">
-          <h4>Land Categories</h4>
+          <h4>Key Projects</h4>
           <ul>
-            <li><Link to="/land?category=Industrial">Industrial (TP2 Activation)</Link></li>
-            <li><Link to="/land?category=Commercial">Commercial (Central Spine)</Link></li>
-            <li><Link to="/land?category=Residential">Residential &amp; Townships</Link></li>
-            <li><Link to="/land?category=Tourism & Hospitality">Heritage &amp; Resort Land</Link></li>
-            <li><Link to="/land?category=Agricultural">Agricultural Buffer Lands</Link></li>
+            <li><Link to="/dholera">Tata Semiconductor Fab</Link></li>
+            <li><Link to="/dholera">Dholera Int'l Airport</Link></li>
+            <li><Link to="/dholera">NH-751 Expressway</Link></li>
+            <li><Link to="/lothal">NMHC Maritime Museum</Link></li>
+            <li><Link to="/dholera">4,400 MW Solar Park</Link></li>
           </ul>
         </div>
 
         <div className="footer-links-col">
-          <h4>Knowledge &amp; Trust</h4>
+          <h4>Official Portals</h4>
           <ul>
-            <li><Link to="/blogs">Research Insights &amp; Blogs</Link></li>
-            <li><Link to="/faqs">Frequently Asked Questions</Link></li>
-            <li><Link to="/contact">Schedule Site Visit</Link></li>
+            <li><Link to="/faqs">FAQs</Link></li>
+            <li><Link to="/contact">Contact Advisory Desk</Link></li>
             <li>
               <a href="https://dholera.gujarat.gov.in" target="_blank" rel="noopener noreferrer" className="ext-link">
-                DSIRDA Official Portal <ExternalLink size={12} />
+                DSIRDA Portal <ExternalLink size={12} />
               </a>
             </li>
             <li>
               <a href="https://shipmin.gov.in" target="_blank" rel="noopener noreferrer" className="ext-link">
-                MoPSW NMHC Project <ExternalLink size={12} />
+                MoPSW NMHC <ExternalLink size={12} />
+              </a>
+            </li>
+            <li>
+              <a href="https://asi.nic.in" target="_blank" rel="noopener noreferrer" className="ext-link">
+                ASI Lothal Site <ExternalLink size={12} />
               </a>
             </li>
           </ul>
@@ -77,17 +81,17 @@ export default function Footer() {
 
       <div className="container footer-bottom">
         <div className="f-bottom-left">
-          <span>&copy; {new Date().getFullYear()} Dholera &amp; Lothal Advisory Services. All rights reserved.</span>
+          <span>&copy; {new Date().getFullYear()} Urban Keys Infra. All rights reserved.</span>
           <p className="disclaimer-text">
-            Disclaimer: Information provided is for educational and strategic investment evaluation. Prospective buyers are advised to conduct independent title searches, revenue record verifications (AnyROR 7/12), and DSIRDA zoning clearances prior to financial commitments.
+            Information provided is for regional awareness and investment evaluation. Verify project details and statutory notifications independently.
           </p>
         </div>
         <div className="f-bottom-badges">
           <span className="trust-badge">
-            <ShieldCheck size={14} /> Title Clear Advisory
+            <ShieldCheck size={14} /> DSIRDA Masterplan Aligned
           </span>
           <span className="trust-badge">
-            <ShieldCheck size={14} /> DSIRDA Plan Aligned
+            <ShieldCheck size={14} /> Official Sources Cited
           </span>
         </div>
       </div>

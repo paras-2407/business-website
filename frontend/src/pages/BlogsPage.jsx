@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
-  Calendar, Clock, User, ArrowRight, Bookmark, 
-  ExternalLink, Search, CheckCircle2, FileText 
+  Calendar, Clock, ArrowRight, Bookmark, 
+  ExternalLink, Search
 } from 'lucide-react';
 import { blogs } from '../data/siteData';
 import ArticleReaderModal from '../components/ArticleReaderModal';
@@ -36,10 +36,10 @@ export default function BlogsPage() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <span className="eyebrow green">RESEARCH &amp; KNOWLEDGE HUB</span>
-            <h1>Authoritative Regional Reports &amp; Legal Insights</h1>
+            <span className="eyebrow green">RESEARCH &bull; REGIONAL BRIEFS</span>
+            <h1>Authoritative Regional Insights</h1>
             <p className="page-hero-lead">
-              In-depth research papers on Dholera SIR infrastructure, NMHC Lothal maritime heritage, Gujarat TP schemes, and green energy investments. All articles cite verified statutory sources.
+              Verified research on Dholera SIR infrastructure, NMHC Lothal heritage, and regional planning with statutory citations.
             </p>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function BlogsPage() {
               <Search size={16} />
               <input
                 type="text"
-                placeholder="Search by topic, project (e.g. Tata Fab, NMHC, Expressway, ASI)..."
+                placeholder="Search articles, projects, or citations..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -80,19 +80,19 @@ export default function BlogsPage() {
           <div className="section-head compact">
             <div>
               <h2>Featured Research Articles ({filteredBlogs.length})</h2>
-              <p>Click any article to launch the complete unabridged preview with citations.</p>
+              <p>Click any card to read the complete article with official citations.</p>
             </div>
           </div>
 
           {filteredBlogs.length === 0 ? (
             <div className="empty-results-box">
-              <h3>No articles found matching "{searchQuery}"</h3>
-              <p>Try clearing your search query or choosing another category.</p>
+              <h3>No articles found</h3>
+              <p>Try searching for a different keyword or choose another category.</p>
               <button 
                 className="btn primary" 
                 onClick={() => { setSearchQuery(''); setSelectedCategory('All'); }}
               >
-                Show All 6 Articles
+                Reset Filters
               </button>
             </div>
           ) : (
@@ -122,10 +122,9 @@ export default function BlogsPage() {
                     <h3>{article.title}</h3>
                     <p>{article.excerpt}</p>
 
-                    {/* Citations Preview Tag */}
                     <div className="card-citations-preview">
                       <Bookmark size={13} />
-                      <span>{article.citations?.length || 3} Official Sources Cited (PIB, DSIRDA, ASI)</span>
+                      <span>{article.citations?.length || 3} Verified Sources Cited</span>
                     </div>
 
                     <button 
@@ -135,7 +134,7 @@ export default function BlogsPage() {
                         setSelectedArticle(article);
                       }}
                     >
-                      <span>Read Complete Article</span>
+                      <span>Read Full Article</span>
                       <ArrowRight size={14} />
                     </button>
                   </div>
@@ -146,58 +145,59 @@ export default function BlogsPage() {
         </div>
       </section>
 
-      {/* Sources & Citations Directory */}
+      {/* Official Portals Directory */}
       <section className="section bg-light">
         <div className="container">
-          <div className="section-head">
+          <div className="section-head compact">
             <div>
-              <span className="eyebrow green">STATUTORY REPOSITORIES</span>
-              <h2>Credible Source Archives &amp; Official Portals</h2>
+              <span className="eyebrow green">STATUTORY SOURCES</span>
+              <h2>Official Portals &amp; Repositories</h2>
             </div>
-            <p>We source our findings directly from recognized statutory and governmental databases.</p>
           </div>
 
           <div className="sources-directory-grid">
             <div className="source-dir-card">
-              <h4>DSIRDA Development Authority</h4>
-              <p>Official master plans, Town Planning scheme gazettes, and general development control regulations (GDCR).</p>
+              <h4>DSIRDA Authority</h4>
+              <p>Master plans, TP scheme maps, and GDCR zoning rules.</p>
               <a href="https://dholera.gujarat.gov.in" target="_blank" rel="noopener noreferrer" className="ext-link">
-                Visit dholera.gujarat.gov.in <ExternalLink size={13} />
+                dholera.gujarat.gov.in <ExternalLink size={13} />
               </a>
             </div>
 
             <div className="source-dir-card">
-              <h4>Press Information Bureau (PIB)</h4>
-              <p>Official Government of India cabinet approvals for Tata Semiconductor Fab, Expressway funding, and airport sanctions.</p>
+              <h4>Press Information Bureau</h4>
+              <p>Union Cabinet approvals for Tata Semiconductor Fab and transit corridors.</p>
               <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="ext-link">
-                Visit pib.gov.in <ExternalLink size={13} />
+                pib.gov.in <ExternalLink size={13} />
               </a>
             </div>
 
             <div className="source-dir-card">
-              <h4>Archaeological Survey of India (ASI)</h4>
-              <p>Excavation memoirs by Dr. S.R. Rao, site documentation, and UNESCO World Heritage Tentative List dossier for Lothal.</p>
+              <h4>Archaeological Survey of India</h4>
+              <p>Excavation reports and UNESCO tentative dossier for Lothal.</p>
               <a href="https://asi.nic.in" target="_blank" rel="noopener noreferrer" className="ext-link">
-                Visit asi.nic.in <ExternalLink size={13} />
+                asi.nic.in <ExternalLink size={13} />
               </a>
             </div>
 
             <div className="source-dir-card">
-              <h4>Sagarmala / MoPSW</h4>
-              <p>National Maritime Heritage Complex (NMHC) project milestones, tender notices, and museum gallery architectural blueprints.</p>
+              <h4>Ministry of Ports &amp; Shipping</h4>
+              <p>NMHC Lothal project updates and museum complex milestones.</p>
               <a href="https://shipmin.gov.in" target="_blank" rel="noopener noreferrer" className="ext-link">
-                Visit shipmin.gov.in <ExternalLink size={13} />
+                shipmin.gov.in <ExternalLink size={13} />
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Full Article Reader Modal (Issue 8) */}
-      <ArticleReaderModal
-        article={selectedArticle}
-        onClose={() => setSelectedArticle(null)}
-      />
+      {/* Conditionally rendered modal - guarantees no scroll lock on page load */}
+      {selectedArticle && (
+        <ArticleReaderModal
+          article={selectedArticle}
+          onClose={() => setSelectedArticle(null)}
+        />
+      )}
     </div>
   );
 }
