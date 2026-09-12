@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Filter, ZoomIn, ShieldCheck, Camera, Layers } from 'lucide-react';
+import { ZoomIn, ShieldCheck } from 'lucide-react';
 import { galleryItems } from '../data/siteData';
 import GalleryModal from '../components/GalleryModal';
 
@@ -26,10 +26,10 @@ export default function GalleryPage() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <span className="eyebrow green">VISUAL ARCHIVES &bull; HIGH-RESOLUTION ASSETS</span>
-            <h1>High-Definition Visual Gallery</h1>
+            <span className="eyebrow green">MEDIA ARCHIVE</span>
+            <h1>High-Resolution Gallery</h1>
             <p className="page-hero-lead">
-              Explore high-resolution photographs, architectural blueprints, and conservation documentation sourced from DSIRDA, the Ministry of Ports &amp; Shipping, and the Archaeological Survey of India (ASI).
+              Verified photographs and blueprints from DSIRDA, MoPSW, and the Archaeological Survey of India (ASI).
             </p>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function GalleryPage() {
                     <div className="zoom-circle">
                       <ZoomIn size={22} />
                     </div>
-                    <span className="gallery-hover-text">Click to View High-Res &amp; Details</span>
+                    <span className="gallery-hover-text">Click to Expand</span>
                   </div>
                 </div>
 
@@ -88,11 +88,13 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Lightbox Modal (Issue 7) */}
-      <GalleryModal
-        item={selectedMedia}
-        onClose={() => setSelectedMedia(null)}
-      />
+      {/* Conditionally rendered modal - guarantees no scroll lock on page load */}
+      {selectedMedia && (
+        <GalleryModal
+          item={selectedMedia}
+          onClose={() => setSelectedMedia(null)}
+        />
+      )}
     </div>
   );
 }

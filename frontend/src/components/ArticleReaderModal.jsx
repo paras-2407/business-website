@@ -3,16 +3,17 @@ import { X, ExternalLink, Calendar, Clock, User, Bookmark, CheckCircle2, Share2 
 
 export default function ArticleReaderModal({ article, onClose }) {
   useEffect(() => {
+    if (!article) return;
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
     };
     document.body.style.overflow = 'hidden';
     window.addEventListener('keydown', handleKeyDown);
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [onClose]);
+  }, [article, onClose]);
 
   if (!article) return null;
 

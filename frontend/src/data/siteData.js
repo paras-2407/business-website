@@ -1,3 +1,21 @@
+export const companyProfile = {
+  name: 'Urban Keys Infra',
+  founded: '2004',
+  experienceYears: '20+',
+  headquarters: 'Jaipur, Rajasthan',
+  regionalOffice: 'Dholera SIR Activation Area & Ahmedabad, Gujarat',
+  email: 'urbankeysinfra@gmail.com',
+  phone: '+91 98765 43210',
+  tagline: '20+ Years Real Estate Consultancy • Jaipur • Gujarat Growth Corridors',
+  mission: 'Helping clients choose their favorite property, whether investing in high-growth residential land or strategic commercial land with absolute title security and regulatory due diligence.',
+  stats: [
+    { value: '20+ Years', label: 'Consultancy Excellence' },
+    { value: 'Jaipur', label: 'Headquarters' },
+    { value: 'Residential & Commercial', label: 'Land Specialization' },
+    { value: '100% Verified', label: 'Title Due Diligence' }
+  ]
+};
+
 export const destinations = {
   dholera: {
     label: 'Dholera SIR',
@@ -527,6 +545,51 @@ export const galleryItems = [
     image: '/assets/lothal-museum.jpg',
     source: 'Sagarmala NMHC Curatorial Archives',
     description: 'Interior exhibition gallery showcasing illuminated models of ancient Indus Valley trade vessels and Harappan navigation artifacts.'
+  },
+  {
+    id: 'gal-9',
+    category: 'lothal',
+    title: 'National Maritime Heritage Complex Official Masterplan',
+    subtitle: '400-acre comprehensive development plan across coastal zones',
+    image: '/assets/nmhc-official-masterplan.webp',
+    source: 'National Maritime Heritage Complex (Official: nmhc.in)',
+    description: 'Official masterplan from the Ministry of Ports, Shipping and Waterways detailing the coastal village zones, state pavilions, 14 museum galleries, and research institute.'
+  },
+  {
+    id: 'gal-10',
+    category: 'lothal',
+    title: 'NMHC Lothal Maritime Museum Campus Aerial',
+    subtitle: 'Monumental architectural complex on coastal lagoons',
+    image: '/assets/nmhc-museum-aerial.webp',
+    source: 'National Maritime Heritage Complex (Official: nmhc.in)',
+    description: 'Official aerial perspective of the world-class museum complex with surrounding navigable water canals echoing Lothal’s ancient Harappan dock basin.'
+  },
+  {
+    id: 'gal-11',
+    category: 'lothal',
+    title: 'World’s Highest Lighthouse Museum (77m)',
+    subtitle: 'Iconic coastal lighthouse & sky observation decks',
+    image: '/assets/nmhc-lighthouse-concept.png',
+    source: 'MoPSW / Sagarmala NMHC Archives (nmhc.in)',
+    description: 'State-of-the-art 77-meter lighthouse tower housing heritage optic galleries and 360-degree views over the Gulf of Khambhat and Lothal archaeological site.'
+  },
+  {
+    id: 'gal-12',
+    category: 'dholera',
+    title: 'ABCD Building (Command & Control Centre)',
+    subtitle: 'Administrative & Business Centre for Dholera (LEED Gold)',
+    image: '/assets/dholera-abcd-building.jpg',
+    source: 'Dholera SIRDA Official Portal (dholera.gujarat.gov.in)',
+    description: 'The iconic glass-facade administrative headquarters housing Dholera’s Central Command & Control Centre (CCCC) orchestrating SCADA, traffic, water, and smart city services.'
+  },
+  {
+    id: 'gal-13',
+    category: 'infra',
+    title: 'Central Canal Corridor & Smart Utility Ducts',
+    subtitle: 'Plug-and-play subterranean city infrastructure',
+    image: '/assets/dholera-canal-infra.jpg',
+    source: 'Dholera SIRDA Official Portal (dholera.gujarat.gov.in)',
+    description: 'Landscaped central canal front alongside trunk utility corridors accommodating subterranean storm water, treated water, power conduits, and fiber networks with zero road digging.'
   }
 ];
 

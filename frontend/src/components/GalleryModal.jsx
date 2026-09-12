@@ -3,16 +3,17 @@ import { X, ShieldCheck, ExternalLink, ZoomIn } from 'lucide-react';
 
 export default function GalleryModal({ item, onClose }) {
   useEffect(() => {
+    if (!item) return;
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
     };
     document.body.style.overflow = 'hidden';
     window.addEventListener('keydown', handleKeyDown);
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [onClose]);
+  }, [item, onClose]);
 
   if (!item) return null;
 

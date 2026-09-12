@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight, Menu, X, Building2, Landmark, Compass, PhoneCall } from 'lucide-react';
+import { ArrowRight, Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
-    { label: 'Overview', path: '/about' },
+    { label: 'About Us', path: '/about' },
     { label: 'Dholera SIR', path: '/dholera' },
     { label: 'Lothal Heritage', path: '/lothal' },
-    { label: 'Land Options', path: '/land' },
     { label: 'Blogs & Updates', path: '/blogs' },
     { label: 'Gallery', path: '/gallery' },
     { label: 'FAQs', path: '/faqs' },
@@ -27,10 +26,10 @@ export default function Header() {
     <header className="header">
       <div className="container nav">
         <Link to="/" className="brand" onClick={() => setOpen(false)}>
-          <img src="/assets/logo.png" alt="Dholera & Lothal Logo" className="brand-logo-img" />
+          <img src="/assets/urban-keys-logo.png" alt="Urban Keys Infra Logo" className="brand-logo-img" />
           <div className="brand-text">
-            <span className="brand-title">Dholera & Lothal</span>
-            <span className="brand-sub">SMART CITY &bull; MARITIME HERITAGE &bull; LAND</span>
+            <span className="brand-title">Urban Keys Infra</span>
+            <span className="brand-sub">20+ YRS REAL ESTATE CONSULTANCY &bull; JAIPUR</span>
           </div>
         </Link>
 

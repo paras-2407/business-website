@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Award, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import EnquiryForm from '../components/EnquiryForm';
 
 export default function ContactPage() {
@@ -14,10 +14,10 @@ export default function ContactPage() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <span className="eyebrow green">GET IN TOUCH &bull; CONSULT ADVISORS</span>
-            <h1>Schedule a Regional Land Consultation</h1>
+            <span className="eyebrow green">URBAN KEYS INFRA &bull; CONSULTANCY DESK</span>
+            <h1>Connect with Urban Keys Infra</h1>
             <p className="page-hero-lead">
-              Whether you are an institutional developer, industrial manufacturing firm, or private investor, our Gujarat-based advisory team provides on-ground guidance and verified due diligence.
+              With over 20+ years of real estate consultancy experience based in Jaipur, Urban Keys Infra helps investors and families choose their favorite property across prime residential and commercial land in Jaipur and Gujarat's premier growth corridors.
             </p>
           </div>
         </div>
@@ -28,9 +28,9 @@ export default function ContactPage() {
           {/* Left Column: Office info and trust signals */}
           <div className="contact-info-pane">
             <span className="eyebrow green">OUR DIRECT DESKS</span>
-            <h2>We’re Here to Simplify Your Regional Search</h2>
+            <h2>We’re Here to Simplify Your Property Search</h2>
             <p>
-              Visiting Dholera SIR or the Lothal NMHC Corridor? We arrange authorized site visits, coordinate with DSIRDA administrative cells, and provide verified cadastral maps.
+              Looking to invest in residential townships, commercial corridors, or high-potential land in Dholera SIR and Lothal NMHC? Our advisory team offers end-to-end guidance, verified cadastral maps, and comprehensive due diligence.
             </p>
 
             <div className="contact-channel-list">
@@ -46,27 +46,27 @@ export default function ContactPage() {
               <div className="channel-card">
                 <Mail className="channel-icon" size={22} />
                 <div>
-                  <small>Official Advisory Email</small>
-                  <strong>advisory@dholera-lothal.in</strong>
-                  <span>Fast response within 4 business hours</span>
+                  <small>Official Consultancy Email</small>
+                  <strong>urbankeysinfra@gmail.com</strong>
+                  <span>Prompt response within 4 business hours</span>
                 </div>
               </div>
 
               <div className="channel-card">
                 <MapPin className="channel-icon" size={22} />
                 <div>
-                  <small>Regional Field &amp; Head Offices</small>
-                  <strong>Dholera Activation Area (TP2) &amp; SG Highway, Ahmedabad</strong>
-                  <span>On-ground presence for physical plot inspections</span>
+                  <small>Headquarters &amp; Regional Offices</small>
+                  <strong>Head Office: Jaipur, Rajasthan</strong>
+                  <span>Regional Advisory Desks: Dholera SIR (TP2) &amp; Ahmedabad, Gujarat</span>
                 </div>
               </div>
 
               <div className="channel-card">
-                <Clock className="channel-icon" size={22} />
+                <Award className="channel-icon" size={22} />
                 <div>
-                  <small>Site Visit Schedule</small>
-                  <strong>Guided Site Visits Every Tuesday, Thursday &amp; Saturday</strong>
-                  <span>Departure from Ahmedabad via NH-751 Expressway</span>
+                  <small>Experience &amp; Expertise</small>
+                  <strong>20+ Years in Real Estate Consultancy</strong>
+                  <span>Residential &amp; Commercial Land Advisory &bull; Pan-India &amp; NRI Clients</span>
                 </div>
               </div>
             </div>

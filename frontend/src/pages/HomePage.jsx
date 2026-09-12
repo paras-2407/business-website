@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { 
-  ArrowRight, CheckCircle2, ChevronLeft, ChevronRight, 
-  MapPin, Building2, ShieldCheck, TrendingUp, Landmark, 
-  Plane, Route as RouteIcon, TrainFront, Ship, Waves, 
-  Leaf, Factory, Compass, Award, FileText, Sparkles
+  ArrowRight, CheckCircle2, MapPin, Building2, ShieldCheck, 
+  TrendingUp, Landmark, Plane, Route as RouteIcon, TrainFront, 
+  Ship, Waves, Sparkles, Cpu, Compass
 } from 'lucide-react';
 import { destinations, transformationMilestones, transport, blogs } from '../data/siteData';
 import EnquiryForm from '../components/EnquiryForm';
 import ArticleReaderModal from '../components/ArticleReaderModal';
 
 export default function HomePage() {
-  const navigate = useNavigate();
   const [activeRegion, setActiveRegion] = useState('dholera');
-  const [activeMilestone, setActiveMilestone] = useState(2); // default to 2024-2026 phase
+  const [activeMilestone, setActiveMilestone] = useState(2);
   const [selectedArticle, setSelectedArticle] = useState(null);
 
   const regionData = destinations[activeRegion];
@@ -29,27 +27,27 @@ export default function HomePage() {
 
   return (
     <div className="home-page">
-      {/* 1. HERO SECTION (Fixes Issue 2: properly framed, no deviation, ultra crisp) */}
+      {/* 1. HERO SECTION */}
       <section className="hero">
         <div className="hero-bg-overlay" />
         <div className="container hero-container">
           <div className="hero-content">
             <div className="hero-badge">
               <Sparkles size={14} />
-              <span>INVEST TODAY &bull; BUILD TOMORROW</span>
+              <span>GUJARAT STRATEGIC GROWTH BELT</span>
             </div>
             <h1>
-              Prime Land Opportunities in <span>Dholera &amp; Lothal</span>
+              Dholera &amp; Lothal: <span>Smart Future &bull; Ancient Legacy</span>
             </h1>
             <p className="hero-lead">
-              Discover verified industrial, commercial, and tourism land in Gujarat’s high-growth corridor. From India’s premier greenfield smart city to the monumental National Maritime Heritage Complex.
+              India’s largest planned greenfield smart city meets the world’s oldest maritime trade capital. Explore transformative industrial hubs and coastal heritage.
             </p>
             <div className="hero-actions">
-              <Link to="/land" className="btn primary lg">
-                Explore Land Options <ArrowRight size={16} />
+              <Link to="/dholera" className="btn primary lg">
+                <Building2 size={18} /> Explore Dholera SIR
               </Link>
-              <Link to="/about" className="btn ghost lg">
-                Compare Both Regions
+              <Link to="/lothal" className="btn ghost lg">
+                <Landmark size={18} /> Explore Lothal NMHC
               </Link>
             </div>
 
@@ -68,63 +66,61 @@ export default function HomePage() {
               </div>
               <div className="hero-stat-pill">
                 <strong>45 Mins</strong>
-                <span>Ahmedabad Expressway</span>
+                <span>Ahmedabad Transit</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. WHY THIS REGION */}
+      {/* 2. WHY THIS REGION - CONDENSED */}
       <section className="section why-section">
         <div className="container">
-          <div className="section-head">
+          <div className="section-head compact">
             <div>
               <span className="eyebrow green">STRATEGIC ADVANTAGES</span>
-              <h2>Location. Infrastructure. Policy. Opportunity.</h2>
+              <h2>Location. Infrastructure. Growth.</h2>
             </div>
-            <p>
-              We simplify land investments across the Gulf of Khambhat growth belt by delivering transparent zoning analytics, title verification, and direct authority compliance.
-            </p>
+            <p>Direct connectivity, planned trunk utilities, and world-class mega-anchors.</p>
           </div>
 
           <div className="feature-grid">
             <div className="feature-card">
               <div className="feature-icon-box">
-                <MapPin size={24} />
+                <MapPin size={22} />
               </div>
-              <h3>Multimodal Strategic Belt</h3>
-              <p>Direct integration with the Delhi-Mumbai Industrial Corridor (DMIC), Western Dedicated Freight Corridor, and coastal shipping sea lanes.</p>
+              <h3>Multimodal Hub</h3>
+              <p>Integrated with the Delhi-Mumbai Industrial Corridor, Western DFC, and coastal ports.</p>
             </div>
 
             <div className="feature-card">
               <div className="feature-icon-box">
-                <Building2 size={24} />
+                <Building2 size={22} />
               </div>
-              <h3>Plug-and-Play Utilities</h3>
-              <p>Zero-digging underground utility tunnels housing potable water, recycled water, power conduits, gas networks, and fiber optic cabling.</p>
+              <h3>Smart Utilities</h3>
+              <p>Underground utility conduits for water, power, gas, and fiber with zero road digging.</p>
             </div>
 
             <div className="feature-card">
               <div className="feature-icon-box">
-                <ShieldCheck size={24} />
+                <ShieldCheck size={22} />
               </div>
-              <h3>Statutory Masterplan Compliance</h3>
-              <p>Clear reconstituted Final Plots (FP) under DSIRDA Town Planning Schemes 1 to 6 with single-window regulatory fast-tracking.</p>
+              <h3>Masterplan Security</h3>
+              <p>DSIRDA Town Planning schemes with clear legal demarcation and single-window clearances.</p>
             </div>
 
             <div className="feature-card">
               <div className="feature-icon-box">
-                <TrendingUp size={24} />
+                <TrendingUp size={22} />
               </div>
-              <h3>Exponential Capital Growth</h3>
-              <p>Catalyzed by national mega-anchors: Tata Semiconductor Fab, Dholera Greenfield International Airport, and Lothal NMHC complex.</p>
+              <h3>National Catalysts</h3>
+              <p>Anchored by Tata Semiconductor Fab, Dholera Airport, and Lothal Maritime Complex.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. DESTINATION SHOWCASE WITH TOGGLE & DEDICATED BUTTONS (Fixes Issue 5) */}
+      {/* 3. DESTINATION SHOWCASE WITH TOGGLE */}
       <section className="section destination-section">
         <div className="container">
           <div className="destination-top-bar">
@@ -145,7 +141,7 @@ export default function HomePage() {
               </div>
             </div>
             <span className="destination-note">
-              Two distinct growth stories located 35 km apart along Gujarat’s coastal corridor.
+              Two growth hubs separated by 35 km in Gujarat’s coastal belt.
             </span>
           </div>
 
@@ -165,7 +161,6 @@ export default function HomePage() {
                 ))}
               </div>
 
-              {/* Fix Issue 5: Separate explore buttons taking to their specific pages */}
               <div className="dest-actions-row">
                 {activeRegion === 'dholera' ? (
                   <Link to="/dholera" className="btn primary">
@@ -176,8 +171,8 @@ export default function HomePage() {
                     Explore Lothal Heritage Portal <ArrowRight size={16} />
                   </Link>
                 )}
-                <Link to={`/land?region=${activeRegion}`} className="btn outline">
-                  View {regionData.label} Land Options
+                <Link to="/about" className="btn outline">
+                  Compare Both Regions
                 </Link>
               </div>
             </div>
@@ -190,46 +185,31 @@ export default function HomePage() {
               />
               <div className="dest-image-overlay-badge">
                 <strong>{regionData.label}</strong>
-                <small>{activeRegion === 'dholera' ? 'Greenfield Smart Metropolis' : 'Harappan Port & NMHC Complex'}</small>
+                <small>{activeRegion === 'dholera' ? 'Greenfield Smart City' : 'Harappan Port & NMHC'}</small>
               </div>
             </div>
           </div>
 
-          {/* Land grid preview for the active region */}
-          <div className="land-preview-block">
+          {/* Key Strategic Focus Areas for Active Region */}
+          <div className="strategic-highlights-block">
             <div className="section-head compact">
               <div>
-                <h3>{regionData.landTitle}</h3>
-                <p>{regionData.landSubtitle}</p>
+                <h3>Key Strategic Focus Areas: {regionData.label}</h3>
+                <p>Core development sectors driving regional transformation.</p>
               </div>
-              <Link to={`/land?region=${activeRegion}`} className="text-link">
-                View All {regionData.label} Plots <ArrowRight size={16} />
+              <Link to={activeRegion === 'dholera' ? '/dholera' : '/lothal'} className="text-link">
+                Full Details <ArrowRight size={16} />
               </Link>
             </div>
 
-            <div className="land-grid">
-              {regionData.lands.map((land) => (
-                <div className="land-card" key={land.id || land.title}>
-                  <div className="land-card-img-wrap">
-                    <img src={`/assets/${land.img}`} alt={land.title} />
-                    <span className="land-badge">{land.category}</span>
+            <div className="strategic-grid">
+              {regionData.highlights.map((h, i) => (
+                <div className="strategic-card" key={i}>
+                  <div className="s-card-top">
+                    {i === 0 ? <Cpu size={20} /> : i === 1 ? <RouteIcon size={20} /> : i === 2 ? <Plane size={20} /> : <Compass size={20} />}
+                    <h4>{h.title}</h4>
                   </div>
-                  <div className="land-body">
-                    <h4>{land.title}</h4>
-                    <p>{land.desc}</p>
-                    {land.specs && (
-                      <div className="land-specs-mini">
-                        <span>Road: {land.specs.roadWidth}</span>
-                        <span>FSI: {land.specs.fsi}</span>
-                      </div>
-                    )}
-                    <Link 
-                      to={`/contact?interest=${encodeURIComponent(land.title)}&region=${encodeURIComponent(regionData.label)}`} 
-                      className="land-enquire-link"
-                    >
-                      Enquire on this Plot <ArrowRight size={14} />
-                    </Link>
-                  </div>
+                  <p>{h.detail}</p>
                 </div>
               ))}
             </div>
@@ -237,20 +217,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. MODERN TRANSFORMATION MILESTONES (Fixes Issue 6: Replaces crude 4px progress bar) */}
+      {/* 4. MODERN TRANSFORMATION ROADMAP */}
       <section className="section roadmap-section">
         <div className="container">
-          <div className="section-head">
+          <div className="section-head compact">
             <div>
-              <span className="eyebrow green">REGIONAL TRANSFORMATION ROADMAP</span>
-              <h2>From Blueprint to Industrial Reality (2007 &rarr; 2030+)</h2>
+              <span className="eyebrow green">EXECUTION TIMELINE</span>
+              <h2>Transformation Roadmap (2007 &rarr; 2030+)</h2>
             </div>
-            <p>
-              Understand Dholera’s disciplined execution phases instead of viewing the region only through speculative claims.
-            </p>
+            <p>Key developmental phases from planning to operational manufacturing.</p>
           </div>
 
-          {/* Interactive Phase Selector Pills */}
           <div className="milestone-tabs">
             {transformationMilestones.map((m, idx) => (
               <button
@@ -265,7 +242,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Modern Milestone Visual Card */}
           <div className="milestone-feature-card">
             <div className="m-card-content">
               <div className="m-card-badge-row">
@@ -286,7 +262,7 @@ export default function HomePage() {
 
               <div className="m-takeaway-box">
                 <CheckCircle2 size={18} />
-                <span><strong>Milestone Impact:</strong> {milestone.keyTakeaway}</span>
+                <span><strong>Impact:</strong> {milestone.keyTakeaway}</span>
               </div>
             </div>
 
@@ -297,17 +273,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. 5-MODE REGIONAL CONNECTIVITY */}
+      {/* 5. 5-MODE CONNECTIVITY */}
       <section className="connectivity-section">
         <div className="container">
-          <div className="section-head light">
+          <div className="section-head light compact">
             <div>
-              <span className="eyebrow green-light">MULTIMODAL LOGISTICS NETWORK</span>
+              <span className="eyebrow green-light">MULTIMODAL LOGISTICS</span>
               <h2>5-Mode Integrated Connectivity</h2>
             </div>
-            <p>
-              Air &bull; Express Highway &bull; High-Speed MRTS &bull; Deep-Sea Ports &bull; Dedicated Freight Corridors
-            </p>
+            <p>Air &bull; Express Highway &bull; High-Speed MRTS &bull; Deep-Sea Ports &bull; Freight Corridor</p>
           </div>
 
           <div className="transport-grid">
@@ -316,14 +290,14 @@ export default function HomePage() {
               return (
                 <div className="transport-card" key={item.mode}>
                   <div className="t-icon-box">
-                    <Icon size={26} />
+                    <Icon size={24} />
                   </div>
                   <span className="t-mode-tag">{item.mode}</span>
                   <h4>{item.title}</h4>
                   <span className="t-route">{item.route}</span>
                   <p>{item.desc}</p>
                   <div className="t-status">
-                    <CheckCircle2 size={14} />
+                    <CheckCircle2 size={13} />
                     <span>{item.status}</span>
                   </div>
                 </div>
@@ -333,13 +307,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. LATEST BLOGS WITH FULL ARTICLE READER (Fixes Issue 8) */}
+      {/* 6. LATEST BLOGS PREVIEW */}
       <section className="section blogs-preview-section">
         <div className="container">
-          <div className="section-head">
+          <div className="section-head compact">
             <div>
-              <span className="eyebrow green">RESEARCH &amp; REGIONAL INSIGHTS</span>
-              <h2>Latest Articles &amp; Authority Reports</h2>
+              <span className="eyebrow green">RESEARCH BRIEFS</span>
+              <h2>Latest Research &amp; Official Updates</h2>
             </div>
             <Link to="/blogs" className="text-link">
               View All 6 Articles <ArrowRight size={16} />
@@ -366,7 +340,7 @@ export default function HomePage() {
                   <h4>{article.title}</h4>
                   <p>{article.excerpt}</p>
                   <button className="read-article-btn">
-                    Read Full Article &amp; Citations <ArrowRight size={14} />
+                    Read Full Article <ArrowRight size={14} />
                   </button>
                 </div>
               </div>
@@ -375,27 +349,77 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. ENQUIRY STRIP */}
+      {/* 7. ABOUT URBAN KEYS INFRA SPOTLIGHT */}
+      <section className="section bg-light company-spotlight-section">
+        <div className="container">
+          <div className="spotlight-card">
+            <div className="spotlight-logo-pane">
+              <img src="/assets/urban-keys-logo.png" alt="Urban Keys Infra Logo" className="spotlight-logo" />
+              <span className="spotlight-badge">JAIPUR &bull; GUJARAT CORRIDORS</span>
+            </div>
+            <div className="spotlight-copy-pane">
+              <span className="eyebrow green">ESTABLISHED CONSULTANCY &bull; JAIPUR, RAJASTHAN</span>
+              <h2>Urban Keys Infra: 20+ Years of Real Estate Excellence</h2>
+              <p>
+                Headquartered in <strong>Jaipur</strong>, Urban Keys Infra brings over <strong>20+ years</strong> of trusted real estate consultancy experience helping clients choose their favorite property — whether it is strategic investment in residential land or high-growth commercial land.
+              </p>
+              <p>
+                We provide complete on-ground clarity, title due diligence, and zoning insights into Gujarat’s premier mega-corridors: <strong>Dholera SIR Smart City</strong> and the <strong>Lothal National Maritime Heritage Complex (NMHC)</strong>.
+              </p>
+
+              <div className="spotlight-stats-row">
+                <div className="s-stat-item">
+                  <strong>20+ Years</strong>
+                  <span>Consultancy Legacy</span>
+                </div>
+                <div className="s-stat-item">
+                  <strong>Jaipur</strong>
+                  <span>Headquarters</span>
+                </div>
+                <div className="s-stat-item">
+                  <strong>Res &amp; Com</strong>
+                  <span>Land Specialization</span>
+                </div>
+                <div className="s-stat-item">
+                  <strong>100%</strong>
+                  <span>Verified Titles</span>
+                </div>
+              </div>
+
+              <div className="spotlight-actions">
+                <Link to="/about" className="btn primary">
+                  Read About Urban Keys Infra <ArrowRight size={15} />
+                </Link>
+                <Link to="/contact" className="btn outline">
+                  Contact Our Advisory Team
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. ENQUIRY SECTION */}
       <section className="section enquiry-strip-section">
         <div className="container enquiry-strip-container">
           <div className="enquiry-text-pane">
-            <span className="eyebrow green">EXPERT LAND ADVISORY</span>
-            <h2>Make Informed Land Decisions in Dholera &amp; Lothal.</h2>
+            <span className="eyebrow green">URBAN KEYS INFRA ADVISORY</span>
+            <h2>Get In Touch With Urban Keys Infra Specialists</h2>
             <p>
-              Whether you require plug-and-play industrial plots in Dholera TP2, commercial frontage on the Central Spine, or tourism acreage near Lothal NMHC, our land advisors provide complete title verification and zoning guidance.
+              Connect directly with our consultancy team in Jaipur and regional desks in Gujarat for personalized property selection, masterplan guidance, and verified due diligence.
             </p>
             <div className="enquiry-bullet-list">
               <div className="enquiry-bullet">
                 <CheckCircle2 size={18} />
-                <span>100% Verified DSIRDA Town Planning Scheme Allocations</span>
+                <span>20+ Years of Proven Real Estate Consultancy Experience</span>
               </div>
               <div className="enquiry-bullet">
                 <CheckCircle2 size={18} />
-                <span>Revenue Department 7/12 &amp; Non-Encumbrance Due Diligence</span>
+                <span>Prime Residential &amp; Commercial Land Selection</span>
               </div>
               <div className="enquiry-bullet">
                 <CheckCircle2 size={18} />
-                <span>Single-Window Clearance Assistance for Industrial Investors</span>
+                <span>DSIRDA Masterplan &amp; NMHC Corridor Due Diligence</span>
               </div>
             </div>
           </div>
@@ -406,11 +430,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Full Article Reader Modal (Fixes Issue 8) */}
-      <ArticleReaderModal 
-        article={selectedArticle} 
-        onClose={() => setSelectedArticle(null)} 
-      />
+      {/* Full Article Reader Modal - conditionally rendered for zero scroll-lock */}
+      {selectedArticle && (
+        <ArticleReaderModal 
+          article={selectedArticle} 
+          onClose={() => setSelectedArticle(null)} 
+        />
+      )}
     </div>
   );
 }
