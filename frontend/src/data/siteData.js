@@ -5,7 +5,7 @@ export const companyProfile = {
   headquarters: 'Jaipur, Rajasthan',
   regionalOffice: 'Dholera SIR Activation Area & Ahmedabad, Gujarat',
   email: 'urbankeysinfra@gmail.com',
-  phone: '+91 98765 43210',
+  phone: '+91 98281 59175 | +91 93520 94325 | +91 70149 22260',
   tagline: '20+ Years Real Estate Consultancy • Jaipur • Gujarat Growth Corridors',
   mission: 'Helping clients choose their favorite property, whether investing in high-growth residential land or strategic commercial land with absolute title security and regulatory due diligence.',
   stats: [
