@@ -9,8 +9,17 @@ import aiosmtplib
 load_dotenv()
 app = FastAPI(title='Dholera & Lothal Enquiry API', version='1.0.0')
 
-origins = [x.strip() for x in os.getenv('CORS_ORIGINS','http://localhost:5173').split(',') if x.strip()]
-app.add_middleware(CORSMiddleware, allow_origins=origins, allow_credentials=True, allow_methods=['*'], allow_headers=['*'])
+raw_origins = os.getenv('CORS_ORIGINS', 'http://localhost:5173')
+origins = [x.strip() for x in raw_origins.split(',') if x.strip()]
+allow_all = '*' in origins
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'] if allow_all else origins,
+    allow_credentials=not allow_all,
+    allow_methods=['*'],
+    allow_headers=['*'],
+)
 
 class Enquiry(BaseModel):
     name: str = Field(min_length=2, max_length=100)
@@ -18,6 +27,14 @@ class Enquiry(BaseModel):
     phone: str = Field(min_length=7, max_length=20)
     interest: str = Field(min_length=2, max_length=80)
     message: str = Field(default='', max_length=2000)
+
+@app.get('/')
+def root():
+    return {
+        'status': 'ok',
+        'service': 'Dholera & Lothal Enquiry API',
+        'version': '1.0.0'
+    }
 
 @app.get('/health')
 def health():
