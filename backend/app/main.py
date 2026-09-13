@@ -50,7 +50,7 @@ async def send_email(data: Enquiry):
     if not all([host, username, password, recipient, sender]):
         raise RuntimeError('SMTP configuration is incomplete')
     msg=EmailMessage()
-    msg['Subject']=f"New website enquiry — {data.interest} — {data.name}"
+    msg['Subject']=f"New website enquiry - {data.interest} - {data.name}"
     msg['From']=sender
     msg['To']=recipient
     msg['Reply-To']=data.email

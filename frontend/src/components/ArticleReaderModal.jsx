@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, ExternalLink, Calendar, Clock, User, Bookmark, CheckCircle2, Share2 } from 'lucide-react';
+import { X, ExternalLink, Calendar, Clock, User, Bookmark, CheckCircle2 } from 'lucide-react';
 
 export default function ArticleReaderModal({ article, onClose }) {
   useEffect(() => {

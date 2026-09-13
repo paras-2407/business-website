@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, Search, HelpCircle, ArrowRight, ShieldCheck } from 'lucide-react';
+import { ChevronDown, Search, HelpCircle, ArrowRight } from 'lucide-react';
 import { faqsData } from '../data/siteData';
 import { Link } from 'react-router-dom';
 

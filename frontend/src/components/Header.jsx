@@ -26,7 +26,7 @@ export default function Header() {
     <header className="header">
       <div className="container nav">
         <Link to="/" className="brand" onClick={() => setOpen(false)}>
-          <img src="/assets/urban-keys-logo.png" alt="Urban Keys Infra Logo" className="brand-logo-img" />
+          <img src="/assets/urban-keys-logo-nav.png" alt="Urban Keys Infra Logo" className="brand-logo-img" />
           <div className="brand-text">
             <span className="brand-title">Urban Keys Infra</span>
             <span className="brand-sub">20+ YRS REAL ESTATE CONSULTANCY &bull; JAIPUR</span>

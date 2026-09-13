@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, ShieldCheck, ExternalLink, ZoomIn } from 'lucide-react';
+import { X, ShieldCheck } from 'lucide-react';
 
 export default function GalleryModal({ item, onClose }) {
   useEffect(() => {
