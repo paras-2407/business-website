@@ -1,0 +1,16 @@
+[project]
+name = "dholera-lothal-backend"
+version = "1.0.0"
+description = "FastAPI backend for Dholera & Lothal advisory portal"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.116.1",
+    "uvicorn[standard]==0.35.0",
+    "pydantic[email]==2.11.7",
+    "python-dotenv==1.1.1",
+    "aiosmtplib==4.0.2",
+]
+
+[tool.vercel]
+entrypoint = "app.main:app"
