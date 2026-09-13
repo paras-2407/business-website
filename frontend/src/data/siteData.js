@@ -727,7 +727,7 @@ export const allLandOptions = [
 export const faqsData = [
   {
     q: 'What is the key difference between Dholera SIR and Lothal?',
-    a: 'Dholera SIR is India’s premier greenfield industrial smart city (920 sq. km) focused on semiconductors, electronics, clean energy, manufacturing, and modern urban planning. Lothal, located just 35 km north, is an ancient Harappan port city (2400 BCE) currently being developed as the National Maritime Heritage Complex (NMHC) — an international heritage and coastal tourism hub. Both regions complement each other as industrial and tourism growth anchors.'
+    a: 'Dholera SIR is India’s premier greenfield industrial smart city (920 sq. km) focused on semiconductors, electronics, clean energy, manufacturing, and modern urban planning. Lothal, located just 35 km north, is an ancient Harappan port city (2400 BCE) currently being developed as the National Maritime Heritage Complex (NMHC) - an international heritage and coastal tourism hub. Both regions complement each other as industrial and tourism growth anchors.'
   },
   {
     q: 'How can I verify the legal title and zoning of land in Dholera SIR?',

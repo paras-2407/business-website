@@ -56,10 +56,10 @@ export default function AboutPage() {
               <span className="eyebrow green">ABOUT URBAN KEYS INFRA &bull; JAIPUR, RAJASTHAN</span>
               <h1>20+ Years of Trusted Real Estate Consultancy</h1>
               <p className="about-company-lead">
-                <strong>Urban Keys Infra</strong> is a distinguished real estate consultancy based in <strong>Jaipur</strong>, operating under the established firm name <strong>Goyal Lifetime Properties</strong> at Sikar Road, Jaipur. With an illustrious track record spanning over <strong>20+ years</strong>, we specialize in empowering individuals, families, and institutional investors to choose their ideal property — whether high-appreciation residential land or strategic commercial corridors.
+                <strong>Urban Keys Infra</strong> is a distinguished real estate consultancy based in <strong>Jaipur</strong>, operating under the established firm name <strong>Goyal Lifetime Properties</strong> at Sikar Road, Jaipur. With an illustrious track record spanning over <strong>20+ years</strong>, we specialize in empowering individuals, families, and institutional investors to choose their ideal property - whether high-appreciation residential land or strategic commercial corridors.
               </p>
               <p className="about-company-subtext">
-                With deep roots in Rajasthan and strategic expansion into Gujarat’s landmark growth belts — including the futuristic <strong>Dholera SIR Smart City</strong> and the historic <strong>Lothal National Maritime Heritage Complex (NMHC)</strong> — Urban Keys Infra delivers end-to-end consulting, verified cadastral due diligence, and litigation-free property curation.
+                With deep roots in Rajasthan and strategic expansion into Gujarat’s landmark growth belts - including the futuristic <strong>Dholera SIR Smart City</strong> and the historic <strong>Lothal National Maritime Heritage Complex (NMHC)</strong> - Urban Keys Infra delivers end-to-end consulting, verified cadastral due diligence, and litigation-free property curation.
               </p>
 
               <div className="company-stats-strip">

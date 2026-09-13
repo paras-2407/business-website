@@ -40,9 +40,9 @@ export default function ContactPage() {
                   <small>Direct Phone &amp; WhatsApp</small>
                   <strong className="contact-phone-group">
                     <a href="tel:+919828159175">+91 98281 59175</a>
-                    <span className="phone-sep">|</span>
+                    <span className="phone-sep"> | </span>
                     <a href="tel:+919352094325">+91 93520 94325</a>
-                    <span className="phone-sep">|</span>
+                    <span className="phone-sep"> | </span>
                     <a href="tel:+917014922260">+91 70149 22260</a>
                   </strong>
                   <span>Mon &ndash; Sat, 9:00 AM &ndash; 7:00 PM IST</span>
@@ -61,9 +61,9 @@ export default function ContactPage() {
               <div className="channel-card">
                 <MapPin className="channel-icon" size={22} />
                 <div>
-                  <small>Headquarters &amp; Regional Offices</small>
-                  <strong>Head Office: Jaipur, Rajasthan</strong>
-                  <span>Regional Advisory Desks: Dholera SIR (TP2) &amp; Ahmedabad, Gujarat</span>
+                  <small>Offices</small>
+                  <strong>Jaipur, Rajasthan </strong>
+                  <strong>Ahmedabad, Gujarat</strong>
                 </div>
               </div>
 

@@ -265,36 +265,51 @@ img {
 }
 
 .nav {
-  height: 78px;
+  min-height: 86px;
+  height: 86px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
 
-/* Fix Issue 1: PNG Logo styling */
+/* Brand Logo Styling */
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
   flex-shrink: 0;
 }
 
 .brand-logo-img {
-  width: 58px;
-  height: 58px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: var(--white);
   padding: 3px;
-  box-shadow: 0 4px 14px rgba(8, 28, 47, 0.12), 0 0 0 1.5px rgba(245, 158, 11, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease;
 }
 
-.brand-logo-img:hover {
+/* Nav Bar specific logo: enlarged & borderless */
+.header .brand-logo-img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  transition: transform 0.2s ease;
+}
+
+.header .brand-logo-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.25), 0 0 0 2px rgba(245, 158, 11, 0.55);
 }
 
 .brand-text {
@@ -3307,6 +3322,8 @@ img {
 .phone-sep {
   color: var(--slate-400);
   font-weight: 400;
+  margin: 0 6px;
+  display: inline-block;
 }
 
 .channel-card span {
@@ -3586,9 +3603,13 @@ img {
   .brand-sub {
     font-size: 8px;
   }
+  .header .brand-logo-img {
+    width: 60px;
+    height: 60px;
+  }
   .brand-logo-img {
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
   }
   .hero h1 {
     font-size: 32px;

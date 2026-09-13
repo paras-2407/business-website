@@ -1,4 +1,4 @@
-# Dholera & Lothal — React + FastAPI Website
+# Dholera & Lothal- React + FastAPI Website
 
 A scalable starter website for a Dholera/Lothal land-advisory and regional-awareness business.
 

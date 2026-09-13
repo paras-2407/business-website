@@ -28,7 +28,7 @@ export default function Footer() {
             </div>
             <div className="f-contact-item">
               <MapPin size={16} />
-              <span>Head Office: Jaipur, Rajasthan &bull; Regional Desk: Dholera SIR, Gujarat</span>
+              <span>Office: Jaipur, Rajasthan &bull; Ahmedabad, Gujarat</span>
             </div>
           </div>
         </div>

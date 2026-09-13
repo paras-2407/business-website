@@ -319,7 +319,7 @@ export default function HomePage() {
               <span className="eyebrow green">ESTABLISHED CONSULTANCY &bull; JAIPUR, RAJASTHAN</span>
               <h2>Urban Keys Infra: 20+ Years of Real Estate Excellence</h2>
               <p>
-                Headquartered in <strong>Jaipur</strong>, Urban Keys Infra brings over <strong>20+ years</strong> of trusted real estate consultancy experience helping clients choose their favorite property — whether it is strategic investment in residential land or high-growth commercial land.
+                Headquartered in <strong>Jaipur</strong>, Urban Keys Infra brings over <strong>20+ years</strong> of trusted real estate consultancy experience helping clients choose their favorite property - whether it is strategic investment in residential land or high-growth commercial land.
               </p>
               <p>
                 We provide complete on-ground clarity, title due diligence, and zoning insights into Gujarat’s premier mega-corridors: <strong>Dholera SIR Smart City</strong> and the <strong>Lothal National Maritime Heritage Complex (NMHC)</strong>.
