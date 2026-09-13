@@ -2407,20 +2407,13 @@ img {
 .about-company-lead {
   font-size: 16px;
   color: var(--slate-700);
-  line-height: 1.68;
-  margin-bottom: 14px;
+  line-height: 1.7;
+  margin-bottom: 26px;
 }
 
 .about-company-lead strong {
   color: var(--navy-900);
   font-weight: 700;
-}
-
-.about-company-subtext {
-  font-size: 14px;
-  color: var(--slate-600);
-  line-height: 1.65;
-  margin-bottom: 26px;
 }
 
 .company-stats-strip {

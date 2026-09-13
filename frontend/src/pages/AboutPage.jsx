@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Building2, Landmark, ArrowRight, CheckCircle2, ShieldCheck, 
-  MapPin, TrendingUp, Compass, Award, KeyRound, Briefcase, Phone, Mail
-} from 'lucide-react';
-import { destinations, transformationMilestones, companyProfile } from '../data/siteData';
+import { Building2, Landmark, ArrowRight, CheckCircle2, ShieldCheck, MapPin, Mail } from 'lucide-react';
+import { destinations, transformationMilestones } from '../data/siteData';
 
 export default function AboutPage() {
   const [activeRegion, setActiveRegion] = useState('dholera');

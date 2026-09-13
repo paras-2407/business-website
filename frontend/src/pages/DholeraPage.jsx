@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Building2, ArrowRight, ShieldCheck, Zap, 
-  Cpu, Plane, Route, Droplets, CheckCircle2, FileCheck, Layers
+  Cpu, Plane, Route, Droplets, FileCheck
 } from 'lucide-react';
 import EnquiryForm from '../components/EnquiryForm';
 

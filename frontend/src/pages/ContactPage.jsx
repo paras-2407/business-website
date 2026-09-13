@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { Phone, Mail, MapPin, Award, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Award, ShieldCheck } from 'lucide-react';
 import EnquiryForm from '../components/EnquiryForm';
 
 export default function ContactPage() {
