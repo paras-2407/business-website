@@ -5,14 +5,12 @@ import {
   TrendingUp, Landmark, Plane, Route as RouteIcon, TrainFront, 
   Ship, Waves, Sparkles, Cpu, Compass
 } from 'lucide-react';
-import { destinations, transformationMilestones, transport, blogs } from '../data/siteData';
+import { destinations, transformationMilestones, transport } from '../data/siteData';
 import EnquiryForm from '../components/EnquiryForm';
-import ArticleReaderModal from '../components/ArticleReaderModal';
 
 export default function HomePage() {
   const [activeRegion, setActiveRegion] = useState('dholera');
   const [activeMilestone, setActiveMilestone] = useState(2);
-  const [selectedArticle, setSelectedArticle] = useState(null);
 
   const regionData = destinations[activeRegion];
   const milestone = transformationMilestones[activeMilestone];
@@ -36,8 +34,9 @@ export default function HomePage() {
               <Sparkles size={14} />
               <span>GUJARAT STRATEGIC GROWTH BELT</span>
             </div>
-            <h1>
-              Dholera &amp; Lothal: <span>Smart Future &bull; Ancient Legacy</span>
+            <h1 className="hero-title">
+              <span className="hero-title-main">Dholera &amp; Lothal</span>
+              <span className="hero-title-sub">Smart Future &bull; Ancient Legacy</span>
             </h1>
             <p className="hero-lead">
               India’s largest planned greenfield smart city meets the world’s oldest maritime trade capital. Explore transformative industrial hubs and coastal heritage.
@@ -63,6 +62,7 @@ export default function HomePage() {
               <div className="hero-stat-pill">
                 <strong>₹4,500 Cr</strong>
                 <span>NMHC Lothal Project</span>
+                <span className="hero-stat-sub">(National Maritime Heritage Complex)</span>
               </div>
               <div className="hero-stat-pill">
                 <strong>45 Mins</strong>
@@ -307,49 +307,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. LATEST BLOGS PREVIEW */}
-      <section className="section blogs-preview-section">
-        <div className="container">
-          <div className="section-head compact">
-            <div>
-              <span className="eyebrow green">RESEARCH BRIEFS</span>
-              <h2>Latest Research &amp; Official Updates</h2>
-            </div>
-            <Link to="/blogs" className="text-link">
-              View All 6 Articles <ArrowRight size={16} />
-            </Link>
-          </div>
-
-          <div className="blog-grid">
-            {blogs.slice(0, 3).map((article) => (
-              <div 
-                className="blog-card interactive" 
-                key={article.id}
-                onClick={() => setSelectedArticle(article)}
-              >
-                <div className="blog-card-img-wrap">
-                  <img src={`/assets/${article.image}`} alt={article.title} />
-                  <span className="blog-cat-badge">{article.category}</span>
-                </div>
-                <div className="blog-card-body">
-                  <div className="blog-card-meta">
-                    <span>{article.date}</span>
-                    <span>&bull;</span>
-                    <span>{article.readTime}</span>
-                  </div>
-                  <h4>{article.title}</h4>
-                  <p>{article.excerpt}</p>
-                  <button className="read-article-btn">
-                    Read Full Article <ArrowRight size={14} />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. ABOUT URBAN KEYS INFRA SPOTLIGHT */}
+      {/* 6. ABOUT URBAN KEYS INFRA SPOTLIGHT */}
       <section className="section bg-light company-spotlight-section">
         <div className="container">
           <div className="spotlight-card">
@@ -399,7 +357,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. ENQUIRY SECTION */}
+      {/* 7. ENQUIRY SECTION */}
       <section className="section enquiry-strip-section">
         <div className="container enquiry-strip-container">
           <div className="enquiry-text-pane">
@@ -429,14 +387,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Full Article Reader Modal - conditionally rendered for zero scroll-lock */}
-      {selectedArticle && (
-        <ArticleReaderModal 
-          article={selectedArticle} 
-          onClose={() => setSelectedArticle(null)} 
-        />
-      )}
     </div>
   );
 }

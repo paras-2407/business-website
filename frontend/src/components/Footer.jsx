@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="footer-contact-info">
             <div className="f-contact-item">
               <Phone size={16} />
-              <span>+91 98765 43210</span>
+              <span>+91 98281 59175 | +91 93520 94325 | +91 70149 22260</span>
             </div>
             <div className="f-contact-item">
               <Mail size={16} />

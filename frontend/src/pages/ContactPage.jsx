@@ -38,7 +38,13 @@ export default function ContactPage() {
                 <Phone className="channel-icon" size={22} />
                 <div>
                   <small>Direct Phone &amp; WhatsApp</small>
-                  <strong>+91 98765 43210 / +91 79 2345 6789</strong>
+                  <strong className="contact-phone-group">
+                    <a href="tel:+919828159175">+91 98281 59175</a>
+                    <span className="phone-sep">|</span>
+                    <a href="tel:+919352094325">+91 93520 94325</a>
+                    <span className="phone-sep">|</span>
+                    <a href="tel:+917014922260">+91 70149 22260</a>
+                  </strong>
                   <span>Mon &ndash; Sat, 9:00 AM &ndash; 7:00 PM IST</span>
                 </div>
               </div>

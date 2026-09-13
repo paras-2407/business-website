@@ -282,13 +282,19 @@ img {
 }
 
 .brand-logo-img {
-  width: 46px;
-  height: 46px;
+  width: 58px;
+  height: 58px;
   object-fit: contain;
-  border-radius: var(--radius-sm);
+  border-radius: 10px;
   background-color: var(--white);
-  padding: 2px;
-  box-shadow: var(--shadow-sm);
+  padding: 3px;
+  box-shadow: 0 4px 14px rgba(8, 28, 47, 0.12), 0 0 0 1.5px rgba(245, 158, 11, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brand-logo-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.25), 0 0 0 2px rgba(245, 158, 11, 0.55);
 }
 
 .brand-text {
@@ -430,15 +436,36 @@ img {
   margin-bottom: 20px;
 }
 
-.hero h1 {
-  font-size: clamp(38px, 5.2vw, 62px);
-  line-height: 1.05;
+.hero h1,
+.hero-title {
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.12;
   color: var(--white);
   letter-spacing: -0.03em;
   margin-bottom: 18px;
 }
 
-.hero h1 span {
+.hero-title-main {
+  display: block;
+  color: var(--white);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+}
+
+.hero-title-sub {
+  display: block;
+  font-size: clamp(20px, 3.2vw, 34px);
+  font-weight: 700;
+  margin-top: 6px;
+  letter-spacing: -0.01em;
+  color: var(--emerald-400);
+  background: linear-gradient(120deg, #34d399, #6ee7b7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero h1 span:not(.hero-title-main):not(.hero-title-sub) {
   color: var(--emerald-400);
   background: linear-gradient(120deg, #34d399, #6ee7b7);
   -webkit-background-clip: text;
@@ -485,6 +512,15 @@ img {
   font-size: 11px;
   color: #94a3b8;
   margin-top: 2px;
+}
+
+.hero-stat-pill .hero-stat-sub {
+  font-size: 9.5px;
+  color: #a7f3d0;
+  opacity: 0.95;
+  line-height: 1.25;
+  margin-top: 3px;
+  font-weight: 500;
 }
 
 /* ==========================================================================
@@ -2438,23 +2474,33 @@ img {
 }
 
 .company-logo-badge {
-  width: 105px;
-  height: 105px;
-  margin: 0 auto 16px;
-  background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
-  border: 2px solid #fef3c7;
-  border-radius: 50%;
+  width: 100%;
+  max-width: 220px;
+  height: 130px;
+  margin: 0 auto 20px;
+  background: var(--white);
+  border: 1.5px solid rgba(245, 158, 11, 0.35);
+  border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px;
-  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+  padding: 14px 20px;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.12), 0 2px 6px rgba(8, 28, 47, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.company-logo-badge:hover {
+  transform: translateY(-3px);
+  border-color: var(--amber-500);
+  box-shadow: 0 10px 28px rgba(245, 158, 11, 0.22);
 }
 
 .c-logo-large {
   width: 100%;
   height: 100%;
+  max-height: 105px;
   object-fit: contain;
+  display: block;
 }
 
 .company-showcase-card h3 {
@@ -2544,7 +2590,7 @@ img {
 
 .spotlight-card {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 290px 1fr;
   gap: 36px;
   align-items: center;
   background: var(--white);
@@ -2559,17 +2605,30 @@ img {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 22px;
-  background: linear-gradient(135deg, #fffbeb 0%, #f8fafc 100%);
-  border: 1.5px solid #fef3c7;
+  padding: 28px 20px;
+  background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
+  border: 2px solid #fde68a;
   border-radius: var(--radius-lg);
+  box-shadow: 0 10px 28px rgba(245, 158, 11, 0.16);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.spotlight-logo-pane:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(245, 158, 11, 0.24);
 }
 
 .spotlight-logo {
-  width: 130px;
-  height: 130px;
+  width: 170px;
+  height: 170px;
   object-fit: contain;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  filter: drop-shadow(0 4px 10px rgba(8, 28, 47, 0.1));
+  transition: transform 0.25s ease;
+}
+
+.spotlight-logo:hover {
+  transform: scale(1.05);
 }
 
 .spotlight-badge {
@@ -3226,6 +3285,30 @@ img {
   margin-bottom: 2px;
 }
 
+.contact-phone-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.contact-phone-group a {
+  color: var(--navy-900);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.contact-phone-group a:hover {
+  color: var(--emerald-600);
+  text-decoration: underline;
+}
+
+.phone-sep {
+  color: var(--slate-400);
+  font-weight: 400;
+}
+
 .channel-card span {
   font-size: 12px;
   color: var(--slate-500);
@@ -3466,7 +3549,7 @@ img {
     padding: 24px;
   }
   .spotlight-logo-pane {
-    max-width: 220px;
+    max-width: 280px;
     margin: 0 auto;
   }
   .spotlight-copy-pane {
@@ -3504,8 +3587,8 @@ img {
     font-size: 8px;
   }
   .brand-logo-img {
-    width: 38px;
-    height: 38px;
+    width: 48px;
+    height: 48px;
   }
   .hero h1 {
     font-size: 32px;
